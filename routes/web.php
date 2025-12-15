@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JenisProdukController;
+use App\Http\Controllers\ProdukController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,6 +37,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('jenis_produk/{jenis_produk}', [JenisProdukController::class, 'destroy'])
             ->name('jenis_produk.destroy');
     });
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('produk', ProdukController::class);
 });
 
 
