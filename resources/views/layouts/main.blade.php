@@ -34,6 +34,11 @@
                         Dashboard
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('jenis_produk.index') }}" class="block py-2 hover:text-blue-600">
+                        Jenis Produk
+                    </a>
+                </li>
             </ul>
         </aside>
 
